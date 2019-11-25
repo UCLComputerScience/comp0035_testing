@@ -21,10 +21,3 @@ def multiply(first_term, second_term):
     return first_term * second_term
 
 
-# Write a function to calculate the square of a term (ie term * term)
-# def square(term):
-#    return term * term
-
-# Write a function to calculate the square root of a term (i.e. term ** 0.5) note: ** represents power
-# def square_root(term):
-#    return term ** 0.5
