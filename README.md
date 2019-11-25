@@ -44,7 +44,7 @@ python3 -m pytest -v --cov
 Or right click on the file the PyCharm project structure and select Run ‘test_calculator’ with Coverage
  
 
-####Step 4: Create a requirements.txt to list the packages that are dependencies for your project.
+#### Step 5: Create a requirements.txt to list the packages that are dependencies for your project.
 
 From a command line go to the project folder
 Enter
