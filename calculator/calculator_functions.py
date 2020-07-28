@@ -1,5 +1,5 @@
 """
-Calculator containing basic math operations with funcions rather than a class structure.
+Calculator containing basic math operations with functions rather than a class structure.
 """
 
 

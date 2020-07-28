@@ -5,7 +5,10 @@ The lecture materials contain guidance for using PyCharm, if you are using a dif
 
 
 
-#### Step 1: Clone this repository in PyCharm 
+#### Step 1: Clone this repository
+Clone the repository and open it in your preferred IDE.
+
+If you are working in an online code editor you may need to download as zip and upload to the online IDE.
 
 #### Step 2: Create a virtual environment (venv) in PyCharm
 Either: 

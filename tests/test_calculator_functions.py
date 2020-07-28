@@ -1,12 +1,10 @@
 """
 Unit tests for the calculator library
 """
-
-from calculator import calculator_functions
-from unittest import TestCase
+import calculator_functions
 
 
-class TestCalculatorFunctions(TestCase):
+class TestCalculatorFunctions():
 
     def test_addition(self):
         self.assertEqual(calculator_functions.subtract(2, 2), 0)
