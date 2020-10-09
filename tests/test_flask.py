@@ -1,10 +1,11 @@
 import pytest
 
-from app import app
+from app import create_app
 
 
 @pytest.fixture
 def client():
+    app = create_app()
     app.config['TESTING'] = True
 
     with app.test_client() as client:
@@ -28,22 +29,18 @@ def test_index_content(client):
         THEN check the response contains "Calculator"
         """
     response = client.get('/')
+    print(f'The response.data includes {response.data}.')
     assert 'Calculator' in str(response.data)
 
 
-def test_response_contains(client):
+def test_response_data_add_is_correct(client):
     """
-        GIVEN two terms have been entered correctly and add is selected and the form submitted
+        GIVEN two terms have been entered correctly with the value 2 and Add is selected and the form submitted
         WHEN the form is submitted from the index page
-        THEN check the response URL is /result
+        THEN check the response contains the correct result (4)
         """
-    assert True  # Write the code to implement this test
-
-
-def test_result_content(client):
-    """
-        GIVEN two terms (3, 5) have been entered correctly and add is selected and the form submitted
-        WHEN the form is submitted from the index page
-        THEN check the result contains 8
-        """
-    assert True  # Write the code to implement this test
+    response = client.post('/result', data=dict(
+        first_term=2,
+        second_term=2,
+        operation='Add'), follow_redirects=True)
+    assert 'The result is: 4' in str(response.data)
